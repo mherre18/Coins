@@ -27,6 +27,10 @@ form.addEventListener('submit', (e) => {
         show.showMessage('Please complete the form', 'alert bg-danger text-center');
 
     } else {
-        console.log('ok');
+        //console.log('ok');
+        quote.getValues(coinSelected, criptoCurrencySelected)
+        .then(data => {
+            console.log(data);
+        })
     }
 });
