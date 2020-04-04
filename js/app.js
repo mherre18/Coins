@@ -1,4 +1,4 @@
-const quote = new Api('78a45005c9f5c08ba2541eff882f8f60a017793eefe13d286b6ad84815d0eec0');
+const quote = new Api('37fb25b2ff19d349f001973d7d70b3afc042e7f11aa2ebc94c417e15558b3929');
 const show = new Show();
 
 quote.getCoinsApi();
