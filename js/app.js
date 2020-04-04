@@ -1,4 +1,7 @@
+const quote = new Api('78a45005c9f5c08ba2541eff882f8f60a017793eefe13d286b6ad84815d0eec0');
 const show = new Show();
+
+quote.getCoinsApi();
 
 
 const form = document.querySelector('#form');
