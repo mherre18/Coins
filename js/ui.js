@@ -48,7 +48,21 @@ class Show {
     //print result
 
     showResult(result, coin, cripto) {
-        console.log(result[cripto][coin]);
+       //console.log(result[cripto][coin]);
 
+       const dataCoin = result[cripto][coin];
+       let price = dataCoin.PRICE.toFixed(2);
+        //Template with result
+
+        let templateHTML = `
+        <div class="card bg-warning">
+            <div class="card-body text-light">
+                <h2>Result:</h2>
+                <p>Price of ${dataCoin.FROMSYMBOL} to ${dataCoin.TOSYMBOL} is : ${price} </p>
+            </div>
+        </div>
+        `;
+
+        document.querySelector('#result').innerHTML = templateHTML;
     }
 }
