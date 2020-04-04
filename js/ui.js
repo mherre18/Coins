@@ -12,5 +12,9 @@ class Show {
         //select messages
         const divMessage = document.querySelector('.messages');
         divMessage.appendChild(div);
+
+        setTimeout(() => {
+            document.querySelector('.messages div').remove();
+        }, 3000);
     }
 }
