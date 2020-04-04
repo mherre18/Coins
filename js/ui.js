@@ -49,6 +49,12 @@ class Show {
 
     showResult(result, coin, cripto) {
        //console.log(result[cripto][coin]);
+        const beforeResult = document.querySelector('#result > div');
+
+        if(beforeResult) {
+            beforeResult.remove();
+        }
+
 
        const dataCoin = result[cripto][coin];
        let price = dataCoin.PRICE.toFixed(2);
@@ -67,6 +73,18 @@ class Show {
         </div>
         `;
 
-        document.querySelector('#result').innerHTML = templateHTML;
+        this.showSpinner('block');
+
+        setTimeout(() => {
+            document.querySelector('#result').innerHTML = templateHTML;
+            this.showSpinner('none');
+        }, 3000);
+
+        
+    }
+
+    showSpinner(look) {
+        const spinner = document.querySelector('.content-spinner');
+        spinner.style.display = look;
     }
 }
