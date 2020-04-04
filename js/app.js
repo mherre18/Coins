@@ -30,7 +30,8 @@ form.addEventListener('submit', (e) => {
         //console.log('ok');
         quote.getValues(coinSelected, criptoCurrencySelected)
         .then(data => {
-            console.log(data);
+            //console.log(data);
+            show.showResult(data.result.RAW, coinSelected, criptoCurrencySelected );
         })
     }
 });

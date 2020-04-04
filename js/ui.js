@@ -44,4 +44,11 @@ class Show {
             document.querySelector('.messages div').remove();
         }, 3000);
     }
+
+    //print result
+
+    showResult(result, coin, cripto) {
+        console.log(result[cripto][coin]);
+
+    }
 }
