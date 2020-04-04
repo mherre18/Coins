@@ -52,6 +52,8 @@ class Show {
 
        const dataCoin = result[cripto][coin];
        let price = dataCoin.PRICE.toFixed(2);
+       let percentage = dataCoin.CHANGEPCTDAY.toFixed(2);
+       let actualDate = new Date(dataCoin.LASTUPDATE * 1000);
         //Template with result
 
         let templateHTML = `
@@ -59,6 +61,8 @@ class Show {
             <div class="card-body text-light">
                 <h2>Result:</h2>
                 <p>Price of ${dataCoin.FROMSYMBOL} to ${dataCoin.TOSYMBOL} is : ${price} </p>
+                <p>Last day changes % ${percentage} </p>
+                <p>Last update ${actualDate}  </p>
             </div>
         </div>
         `;
