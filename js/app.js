@@ -1,4 +1,7 @@
+const show = new Show();
+
 const form = document.querySelector('#form');
+
 
 //Read form
 
@@ -16,7 +19,9 @@ form.addEventListener('submit', (e) => {
     const criptoCurrencySelected = criptoCurrencySelect.options[criptoCurrencySelect.selectedIndex].value;
 
     if(coinSelected === '' || criptoCurrencySelected === ''){
-        console.log('select something');
+        //console.log('select something');
+        show.showMessage('Please complete the form', 'alert bg-danger text-center');
+
     } else {
         console.log('ok');
     }
